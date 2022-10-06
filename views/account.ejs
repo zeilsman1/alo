@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/general.css">
+    <link rel="stylesheet" href="/static/navbar.css">
+    <link rel="stylesheet" href="/static/steps.css">
+    <link rel="stylesheet" href="/static/account.css">
+    <script src="/static/string.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>    
+    <script src="/static/metamask.js"></script>
+    <script src="/static/account.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="center div-navbar">
+            <a href="../"><p class="p-nav">Blockchain Store</p></a>
+        </div>
+    </nav>
+    <main class="center">
+        <div class="pages">
+            <div class="page">
+                <h1>Deposit & Withdraw</h1>
+                <h3 id="balance">Store Balance :</h3>
+                <h3 id="tokenBalance">Token Balance :</h3>
+                <input type="text" class="input" placeholder="Amount" id="amount">
+                <div class="btn-div">
+                    <button id="deposit" class="btn">Deposit</button>
+                    <button id="withdraw" class="btn">Withdraw</button>
+                </div>
+            </div>
+            <div class="page">
+                <h1>Create Product</h1>
+                <input id="title" type="text" class="input" placeholder="Title">
+                <input id="price" type="text" class="input" placeholder="Price">
+                <input id="image" type="text" class="input" placeholder="Image">
+                <input id="description" type="text" class="input" placeholder="Description">
+                <button id="create" class="btn">Create Product</button>
+            </div>
+            <div class="page">
+                <h1>Products</h1>
+                <input id="searchChat" type="text" class="input" placeholder="Store Address:ID">
+                <button id="findChat" class="btn">Open product chat</button>
+                <button id="myproducts" class="btn">My Products</button>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat-main">
+                <div id="Chat" class="chatting">
+                    
+                </div>
+                <input type="text" class="input" id="inputChat" placeholder="Press enter to submit">
+            </div>
+        </div>
+    </main>
+</body>
+</html>

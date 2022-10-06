@@ -1,0 +1,11 @@
+.step{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.steps>p{
+    margin-bottom: 10px;
+}

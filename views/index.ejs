@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/general.css">
+    <link rel="stylesheet" href="/static/navbar.css">
+    <link rel="stylesheet" href="/static/steps.css">
+    <link rel="stylesheet" href="/static/product.css">
+    <script src="/static/string.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="/static/metamask.js"></script>
+    <script src="/static/navbar.js" defer></script>
+    <script src="/static/product.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="center div-navbar">
+            <p class="p-nav">Blockchain Store</p>
+            <div class="div-input">
+                <input type="text" name="" id="navbar-input" placeholder="Enter store address">
+                <button class="btn-search" id="btn-input"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                  </button>
+            </div>       
+                <button id="account" class="account">
+                    <span>Account</span>                                    
+                </button>           
+        </div>
+    </nav>
+    <main class="center">
+        <%
+        if(!product){
+            
+        %> 
+        <div class="step">
+            <div class="steps">
+            <h2>Step 1</h2>
+            <p>Enter store address and id like 0x0000000000000000000000000000000000000000:0</p>
+            <img src="/static/img/search.png" alt="">
+        </div>
+
+        <div class="steps">
+            <h2>Step 2</h2>
+            <p>Click to Buy button</p>
+            <img src="/static/img/product.PNG" alt="">
+        </div>
+
+        <div class="steps">
+            <h2>Step 3</h2>
+            <p>If you dont have balance click account button</p>
+            <img src="/static/img/account.png" alt="">
+        </div>    
+        <div class="steps">
+            <h2>Step 4</h2>
+            <p>Enter amount and click to deposit</p>
+            <img src="/static/img/deposit.PNG" alt="">
+        </div>  
+        </div>
+        <% 
+        
+        }else{
+
+        %>
+
+        <div class="product">
+            <div class="product-top">
+                <img src=" <%= product.img %>" >
+                <div class="div-texts">
+                    <strong><%= product.title %></strong>
+                    <strong>Price : <%= product.price %>USD</strong>
+                    <strong id="balance">Store Balance : </strong>
+                    <strong id="tokenBalance">Token Balance : </strong>
+                    <strong id="status">Status : </strong>
+                    <button id="buy" class="btn-buy">Buy</button>
+                </div>
+            </div>
+            <div class="description">
+                <h2>Description</h2>
+                <p class="description-text">
+                    <%= product.description %>
+                </p>
+            </div>   
+        </div>
+
+        <% }%>
+       
+    </main>
+</body>
+</html>

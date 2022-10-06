@@ -1,0 +1,38 @@
+.product{
+    padding: 20px;
+}
+
+.product > img{
+    width: 300px;
+    height: 300px;
+}
+
+.product-top{
+    display: flex;
+    gap: 30px;
+}
+
+.product-top > .div-texts{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.btn-buy{
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: orange;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-family: 'Inter',sans-serif;
+}
+
+.description{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+}
